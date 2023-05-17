@@ -12,6 +12,7 @@
 </head>
 <style>
     
+    
     body {
         background-color: black;
         overflow: hidden;
@@ -30,10 +31,19 @@
     }
     .block1, .block2, .block3, .block4, .block5, .block6 {
         margin-right: 20px;
+        animation: jump 1s linear;
+        animation-fill-mode: backwards;
+        animation-play-state: paused;
+        transition: 1s;
     }
 
     .allcards:hover {
         animation-play-state: paused;
+    }
+
+    .block1:hover, .block2:hover, .block3:hover, .block4:hover, .block5:hover, .block6:hover{
+        animation-play-state: running;
+        animation-fill-mode: forwards;
     }
 
     .card1, .card2, .card3, .card4, .card5, .card6 {
@@ -95,6 +105,11 @@
         80% { transform: translate(-2400px, 0); } 
         90% { transform: translate(-2700px, 0); }  
         100% { transform: translate(-3000px, 0); }          
+    }
+
+    @keyframes jump {
+        0%  { transform: translate(0, 0); }
+        100% { transform: translate(0, -20px); } 
     }
 </style>
 
