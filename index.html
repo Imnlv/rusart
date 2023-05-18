@@ -26,14 +26,12 @@
         justify-content: flex-start;
         margin-top: 140px;
         margin-left: 35%;
-        animation: scroll 30s linear alternate infinite;
+        animation: scroll 80s linear alternate infinite;
         transition: 1s;
     }
     .block1, .block2, .block3, .block4, .block5, .block6 {
         margin-right: 20px;
-        animation: jump 1s linear;
-        animation-fill-mode: backwards;
-        animation-play-state: paused;
+        margin-top: 0px;
         transition: 1s;
     }
 
@@ -41,12 +39,11 @@
         animation-play-state: paused;
     }
 
-    .block1:hover, .block2:hover, .block3:hover, .block4:hover, .block5:hover, .block6:hover{
-        animation-play-state: running;
-        animation-fill-mode: forwards;
+    .block1:hover, .block2:hover, .block3:hover, .block4:hover, .block5:hover, .block6:hover, .block7:hover{
+        margin-top: -20px;
     }
 
-    .card1, .card2, .card3, .card4, .card5, .card6 {
+    .card1, .card2, .card3, .card4, .card5, .card6, .card7 {
         object-fit: cover;
         width: 596px;
         height: 361px;
@@ -89,34 +86,34 @@
     .card6 {
         background-image: url('images/превью/800px-Двери_Тимура_\(Тамерлана\).jpg');
     }
+    .card7 {
+        background-image: url('images/превью/Peresvet.jpg');
+    }
 </style>
 
    
 <style>
     @keyframes scroll {
         0%  { transform: translate(0, 0); }
-        10% { transform: translate(-300px, 0); } 
-        20% { transform: translate(-600px, 0); }
-        30% { transform: translate(-900px, 0); }    
-        40% { transform: translate(-1200px, 0); }    
-        50% { transform: translate(-1500px, 0); }    
-        60% { transform: translate(-1800px, 0); }    
-        70% { transform: translate(-2100px, 0); }   
-        80% { transform: translate(-2400px, 0); } 
-        90% { transform: translate(-2700px, 0); }  
-        100% { transform: translate(-3000px, 0); }          
-    }
-
-    @keyframes jump {
-        0%  { transform: translate(0, 0); }
-        100% { transform: translate(0, -20px); } 
+        10% { transform: translate(-600px, 0); } 
+        20% { transform: translate(-1200px, 0); }
+        30% { transform: translate(-1800px, 0); }    
+        40% { transform: translate(-2400px, 0); }    
+        50% { transform: translate(-3000px, 0); }    
+        60% { transform: translate(-3600px, 0); }    
+        70% { transform: translate(-4200px, 0); }   
+        80% { transform: translate(-4800px, 0); } 
+        90% { transform: translate(-5400px, 0); }  
+        100% { transform: translate(-6000px, 0); }          
     }
 </style>
 
 <body>
-<div>
+<div class="prewiev">
     <img src="images/rusart.png" alt="rusart" class="rusart">
+
 </div>
+
 
 <div class="allcards">
 
@@ -163,8 +160,16 @@
     <div class="block6">
         <div class="card6"></div>
         <div class="text">
-            <p class="p1">вИДЕНИЕ ОТРОКУ ВАРФОЛОМЕЮ</p>
-            <p class="p2">М.НЕСТЕРОВ</p>
+            <p class="p1">двери тимура (тамерлана)</p>
+            <p class="p2">в.верещагин</p>
+        </div>
+    </div>
+
+    <div class="block7">
+        <div class="card7"></div>
+        <div class="text">
+            <p class="p1">поединок пересвета с челубеем на куликовом поле</p>
+            <p class="p2">м.авилов</p>
         </div>
     </div>
 
